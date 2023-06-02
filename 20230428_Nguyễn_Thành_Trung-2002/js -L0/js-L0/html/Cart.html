@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trang bán hàng</title>
+  <link rel="stylesheet" href="/js -L0/js-L0/css/Cart.css">
+  <link rel="stylesheet" href="/js -L0/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="shortcut icon" href="/js -L0/js-L0/img/tảixuống-removebg-preview (1).png">
+</head>
+
+<body>
+   <!-- header -->
+   <header class="header">
+    <div class="header__logo">
+     <a class="header__link" href="/js -L0/js-L0/index.html">
+      <img class="header__img" h src="/js -L0/js-L0/img/tảixuống.jfif" alt="" >
+     <b class="logo-b" >Nike</b></a>
+   </div>
+     <div class="header__nav" >
+       <ul class="header__ul">
+         <li class="header__li"><a href="/js -L0/js-L0/index.html">HOME</a></li>
+         <li class="header__li"><a href="#">ABOUT</a></li>
+         <li class="header__li"><a href="/js -L0/js-L0/html/bills.html">BILLS</a></li>
+       </ul>
+        </div>
+        <div class="mobie-munu-btn" style="display: none;" onclick="handlerMobile()"><i class="ti-menu mobie-icon-menu"></i></div>
+        <div class="header__cart"><span class="header__cart-number"></span><a href="/js -L0/js-L0/html/Cart.html"><i
+              class="ti-shopping-cart icon-cart"></i></a></div>
+      </ul>
+   </header>
+  <hr>
+  <!-- content -->
+
+  <div class="container">
+    <!-- <div  class="product-items" style= display:none> -->
+    <div class="row">
+      <!--  Trang  chưa sản phẩm đã được chọn -->
+      <div class="product-cart-items" style=display:block>
+        <div class="row">
+          <div class="productCart">
+            <b class="productCart__name">Product Name</b>
+            <b class="productCart__name-Quantity">Quantity</b>
+            <b class="productCart__name-Subtotal">Subtotal</b>
+            <b class="productCart__name-Total">Total</b>
+            <b class="productCart__name-Cleart">Cleart Cart</b>
+          </div>
+
+          <hr class="hr">
+          <div class="product-lists">
+          </div>
+
+        </div>
+        <hr class="hr">
+
+        <div class="product__button">
+          <button class="back-to-card cart-back">
+            &larr; <a class="link-product" href="/js -L0/js-L0/index.html">Back To Shopping</a>
+          </button>
+          <div class="add-to-card-box">
+            <h3 class="product__TotalView"></h3>
+            <button class="add-to-card " onclick="showConfirm()">
+              Buy</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- trang khong dang chứa sản phẩm  -->
+    <div class="no-product" style=display:none>
+      <div class="no-product-item">
+        <img src="https://etecvn.com/default/template/img/cart-empty.png" alt="icon">
+        <h4 class="no-product__h4">Your Cart Is Empty</h4>
+      </div>
+      <button class="no-product__button cart-back">
+        &larr; <a class="link-product" href="/js -L0/js-L0/index.html">Back To Shopping</a>
+      </button>
+
+
+    </div>
+
+    <!-- trang hiện sau khi đã điền thông tin  -->
+    <div class="product__confirm" style="display:none">
+      <div class="row">
+        <div class="productConfirm">
+          <b class="productConfirm__Code">Code</b>
+          <b class="productConfirm__CustomerName">Customer Name</b>
+          <b class="productConfirm__Date">Date</b>
+          <b class="productConfirm__ItemNumbers">Item Numbers</b>
+          <b class="productConfirm__TotalQuantity">Total Quantity</b>
+          <b class="productConfirm__TotalPrice">Total Price</b>
+          <b class="productConfirm__Return">Return</b>
+        </div>
+        <hr class="hr">
+        <div class="productConfirm_item">
+          <b class="confirm__code">áhdkjhajkha
+            <details>
+              <summary>Details</summary>
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </details>
+          </b>
+          <b class="confirm__CustomerName">Trung trung</b>
+          <b class="confirm__Date">11/29/2022</b>
+          <b class="confirm__ItemNumbers">1</b>
+          <b class="confirm__TotalQuantity">1</b>
+          <b class="confirm__TotalPrice">$4200</b>
+          <i class="ti-close"></i>
+        </div>
+
+        <hr class="hr">
+        <div class="confirm__button">
+          <button class="back-to-card confirm-back">
+            <a class="link-product" href="/js -L0/js-L0/index.html">Back To Shopping</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-footer"></div>
+
+    </div>
+  </div>
+  <!-- modal -->
+  <div class="modal" style="display: none;">
+    <div class="container">
+
+      <div class="modal__form">
+        <div class="icon-close" onclick="closeConfirm()"><i class="ti-close"></i></div>
+        <h2 class="header-title">Thông tin người mua</h2>
+        <hr class="rim">
+        <form class="modal__form-info" action="">
+          <div class="info-fullname">
+            <div class="info_firlName-box">
+              <label for="exampleInputFullName">Họ và tên</label>
+              <input class="info-firlName ip" type="text" placeholder="Họ" onclick="closeNotification()" maxlength="20">
+              <div class="error"></div>
+            </div>
+            <div class="info_lastName-box">
+              <div class="error"></div>
+              <label for="exampleInputFullName"></label>
+              <input class="info-LastName ip" type="text" placeholder="Tên" onclick="closeNotification()" maxlength="20">
+            </div>
+
+          </div>
+          <div class="info-email-box">
+            <label for="exampleInputFullName">Email</label>
+            <input class="info-email ip" type="email" placeholder="Email" onclick="closeNotification()">
+            <div class="error"></div>
+          </div>
+          <div class="info-phoneNumber-box">
+            <label for="exampleInputFullName">Số điện thoại</label>
+            <input class="info-phoneNumber ip" type="number" placeholder="Số Điện Thoại" onclick="closeNotification()" inputmode="numeric">
+            <div class="error"></div>
+          </div>
+          <div class="items-box">
+            <div class="item-boxx">
+              <label for="exampleInputFullName">Địa chỉ</label>
+              <select name="" id="province">
+                <option value="0" class="selectTinh" id="">-- Chọn Tỉnh / Thành phố --</option>
+              </select>
+            </div>
+            <!--  -->
+            <div class="item-box">
+              <label for="exampleInputFullName"></label>
+              <select name="" id="district">
+                <option value="0" class="selectHuyen" id="">-- Chọn Huyện/Quận--</option>
+              </select>
+            </div>
+            <!--  -->
+            <div class="item-box" >
+              <label for="exampleInputFullName"></label>
+              <select name="" id="ward">
+                <option value="0" class="selectXa"   id="" >-- Chọn Phường/Xã--</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="info-apartment-box">
+            <input class="info-apartmentNumber ip" type="number" placeholder="Số Nhà" onclick="closeNotification()" inputmode="numeric">
+          <div class="error"></div>
+          </div>
+          <div class="info__messenger-box">
+            <label for="exampleInputFullName">Lời nhắn</label>
+            <textarea class="info-messenger" name="" id="" cols="30" rows="10" onclick="closeNotification()"></textarea>
+          </div>
+
+        </form>
+        <hr class="rim">
+        <div class="info__button">
+          <button class="info-cancel" onclick="closeConfirm()">Hủy</button><button class="info-confirm" onclick="confirmBuy()">Xác
+            Nhận</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="/js -L0/js-L0/js/data.js"></script>
+  <script src="/js -L0/js-L0/js/cart.js"></script>
+  <script src="/js -L0/js-L0/js/handleAPI.js"></script>
+  <script src="/js -L0/js-L0/js/validateFormBuy.js"></script>
+  <script src="/js -L0/js-L0/js/handerBuy.js"></script>
+  <script src="/js -L0/js-L0/js/RandomID.js"></script>
+</body>
+
+</html>

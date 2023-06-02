@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trang bán hàng</title>
+  <link rel="stylesheet" href="/js -L0/js-L0/css/Cart.css">
+  <link rel="stylesheet" href="/js -L0/js-L0/css/bills.css">
+    <link rel="stylesheet" href="/js -L0/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="/js -L0/js-L0/img/tảixuống-removebg-preview (1).png">
+</head>
+<body>
+    <!-- header -->
+  <header class="header">
+    <div class="header__logo">
+     <a class="header__link" href="/js -L0/js-L0/index.html">
+      <img class="header__img" h src="/js -L0/js-L0/img/tảixuống.jfif" alt="" >
+     <b class="logo-b" >Nike</b></a>
+   </div>
+     <div class="header__nav" >
+       <ul class="header__ul">
+         <li class="header__li"><a href="/js -L0/js-L0/index.html">HOME</a></li>
+         <li class="header__li"><a href="#">ABOUT</a></li>
+         <li class="header__li"><a href="/js -L0/js-L0/html/bills.html">BILLS</a></li>
+       </ul>
+        </div>
+        <div class="mobie-munu-btn" style="display: none;" onclick="handlerMobile()"><i class="ti-menu mobie-icon-menu"></i></div>
+        <div class="header__cart"><span class="header__cart-number"></span><a href="/js -L0/js-L0/html/Cart.html"><i
+              class="ti-shopping-cart icon-cart"></i></a></div>
+      </ul>
+   </header>
+   <hr>
+   <!-- content -->
+<hr>
+    <!-- content -->
+    <div class="container">
+            <!-- trang hiện sau khi đã điền thông tin  -->
+            <div class="product__confirm" style="display:block">
+              <div class="row">
+                <div class="productConfirm">
+                    <b class="productConfirm__Code">Code</b>
+                    <b class="productConfirm__CustomerName">Customer Name</b>
+                    <b class="productConfirm__Date">Date</b>
+                    <b class="productConfirm__TotalQuantity">Total Quantity</b>              
+                    <b class="productConfirm__TotalPrice">Total Price</b>              
+                    <b class="productConfirm__Return">Return</b>              
+                  </div>
+                  <hr class="hr">
+                  <div class="productConfirm_item">
+                      
+                  </div>
+
+                  <hr class="hr">
+                  <div class="confirm__button">
+                    <button class="back-to-card confirm-back">
+                      <a class="link-product" href="/js -L0/js-L0/index.html">Back To Shopping</a>
+                   </button>
+                </div>
+            </div>
+
+            <div class="product-footer"></div>
+            
+        </div>
+    </div>
+    <!-- modal-bill -->
+<div class="modal" id="modall" style="display: none">
+    <div class="content_modal">
+        <!-- <div class="row"> -->
+            <div class="content">
+                <div class="bill-list">
+                    <div class="bill__item-shoe">
+                        <div class="bill__tittle">
+                          <img class="bill__img" src="/js -L0/js-L0/img/Product__HOME/air-max-95-shoes-nv8gnV.jpg" alt="">
+                        <h3 class="bill-name">asdasdsadasdas</h3>
+                      </div>
+                      <b class="bill__Subtotal"></b>
+                      <b class="bill__quantity">soluong:1</b>
+                  </div>
+
+      
+                </div>
+
+            </div>
+        <!-- </div> -->
+    </div>
+</div>
+    <!-- <script src="/js-L0/js/cart.js"></script> -->
+    <script src="/js -L0/js-L0/js/data.js"></script>
+    <script src="/js -L0/js-L0/js/handerOrder.js "></script>
+    <script src="/js -L0/js-L0/js/handerBuy.js "></script>
+    <script src="/js -L0/js-L0/js/bill.js"></script>
+
+</body>
+</html>
+

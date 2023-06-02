@@ -1,0 +1,5 @@
+em dùng json-sever nên là :
+khi vào chạy json-server bawrfng cách:
+B1: cd "js -L0" : chỉ vào file js -L0
+B2: npm start 
+em xin cảm ơn ạ
